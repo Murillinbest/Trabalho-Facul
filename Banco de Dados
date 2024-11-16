@@ -1,0 +1,34 @@
+-- 1. Comando INSERT
+
+-- a) Simples: Inserir um cliente na tabela 'clientes'.
+INSERT INTO clientes (id, nome, email) 
+VALUES (1, 'João Silva', 'joao.silva@email.com');
+
+-- b) Complexa: Inserir múltiplos produtos na tabela 'produtos'.
+INSERT INTO produtos (id, nome, preco, categoria) 
+VALUES 
+(101, 'Notebook', 3500.00, 'Eletrônicos'),
+(102, 'Smartphone', 2000.00, 'Eletrônicos'),
+(103, 'Mesa de Escritório', 450.00, 'Móveis');
+
+-- 2. Comando DELETE
+
+-- a) Simples: Remover um cliente pelo ID na tabela 'clientes'.
+DELETE FROM clientes 
+WHERE id = 1;
+
+-- b) Complexa: Remover todos os produtos de uma categoria específica na tabela 'produtos'.
+DELETE FROM produtos 
+WHERE categoria = 'Eletrônicos' AND preco > 3000.00;
+
+-- 3. Comando UPDATE
+
+-- a) Simples: Atualizar o e-mail de um cliente na tabela 'clientes'.
+UPDATE clientes 
+SET email = 'joao.novo@email.com' 
+WHERE id = 1;
+
+-- b) Complexa: Atualizar o preço de todos os produtos da categoria "Móveis", aplicando um aumento de 10%.
+UPDATE produtos 
+SET preco = preco * 1.10 
+WHERE categoria = 'Móveis';
